@@ -16,7 +16,7 @@ Hello, in this guide we'll be exploiting a very simple stack-based buffer overfl
 
 The brainpan binary can be got from [here](https://github.com/freddiebarrsmith/Buffer-Overflow-Exploit-Development-Practice/raw/master/brainpan/brainpan.exe)
 
-# Section 1 - Crashing
+# Crashing
 
 Firstly, open the brainpan binary and set it running in immunity. 
 
