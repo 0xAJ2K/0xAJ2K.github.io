@@ -1,3 +1,13 @@
+---
+layout: single
+title: Basics of Immunity Debugger
+date: 2021-03-22
+classes: wide
+tags:
+  - Immunity Debugger
+  - Basics
+--- 
+
 # Introduction
 
 This is just a very short piece on the basics on Immunity Debugger.
