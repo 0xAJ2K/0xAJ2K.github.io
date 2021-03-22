@@ -171,7 +171,7 @@ Reset Immunity Debugger and type `!mona jmp -r esp` into the command window at t
 
 ![mona command](/assets/images/BOF/mona-command.PNG)
 
-Once executed, go to the "Window" and choose "2. Log Data"
+Once executed, go to the "Window" and choose "2 Log Data"
 
 ![log data](/assets/images/BOF/window-log-data.PNG)
 
@@ -179,7 +179,7 @@ See that mona has found us a JMP that's not using DEP or ASLR
 
 ![JMP ESP](/assets/images/BOF/JMP.PNG)
 
-The JMP we will we using is `311712F3`. We will need to convert this into little endian format which is backwards like this `\xF3\x12\x17\x31`. Add in the little endian JMP into the "JMP" variable.
+The JMP we will be using is `311712F3`. We will need to convert this into little endian format which is backwards like this `\xF3\x12\x17\x31`. Add in the little endian JMP into the "JMP" variable.
 
 ![JMP in Python](/assets/images/BOF/JMP-in-python.PNG)
 
