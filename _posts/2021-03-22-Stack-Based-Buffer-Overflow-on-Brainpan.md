@@ -141,7 +141,7 @@ badchars = (
 
 Set the "buffer" variable to also include the "badchars" variable then reset Immunity Debugger and send the script.
 
-![bad characters in python](/assets/images/BOF/buffer-var-badchars)
+![bad characters in python](/assets/images/BOF/buffer-var-badchars.PNG)
 
 ![send script](/assets/images/BOF/send-skel-1.PNG)
 
