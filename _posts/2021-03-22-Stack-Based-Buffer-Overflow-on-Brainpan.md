@@ -22,7 +22,7 @@ The brainpan binary can be got from [here](https://github.com/freddiebarrsmith/B
 
 Firstly, open the brainpan binary and set it running in immunity. 
 
-Secondly, connect to brainpan on its port (9999) using nc from your attacking machine and send a small amount of data.  
+Second, connect to brainpan on its port (9999) using nc from your attacking machine and send a small amount of data.  
 
 ![use nc](/assets/images/BOF/nc-to-brainpan.PNG)
 
