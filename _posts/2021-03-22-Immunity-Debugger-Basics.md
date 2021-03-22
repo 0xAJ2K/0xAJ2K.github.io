@@ -16,7 +16,7 @@ This is just a very short piece on the basics on Immunity Debugger.
 
 Firstly, if you're on Windows like me then you'll want to grab yourself Immunity Debugger. It can be downloaded from [here](https://www.immunityinc.com/products/debugger/)
 
-Next, you'll want to install mona.py into Immunity. Mona has some nifty features to make life easier. Mona can be downloaded from [here](https://raw.githubusercontent.com/corelan/mona/master/mona.py) once downloaded move it into the PyCommands folder which can usually be found at `C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands`
+Next, you'll want to install mona.py into Immunity. Mona has some nifty features to make life easier. Mona can be downloaded from [here](https://raw.githubusercontent.com/corelan/mona/master/mona.py). Once downloaded move it into the PyCommands folder which can usually be found at `C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands`
 
 ## Basic usage 
 
