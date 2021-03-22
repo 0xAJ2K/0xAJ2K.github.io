@@ -16,7 +16,7 @@ tags:
 
 In this guide we'll be exploiting a very simple stack-based buffer overflow in the brainpan.exe binary on Windows 10. This guide assumes you have a very basic level of knowledge in using Immunity Debugger such as opening, starting and terminating programs. In addition, we will be using the mona tools for some parts so you'll need that installed too.
 
-The brainpan binary can be got from [here](https://github.com/freddiebarrsmith/Buffer-Overflow-Exploit-Development-Practice/raw/master/brainpan/brainpan.exe)
+The brainpan binary can be downloaded from [here](https://github.com/freddiebarrsmith/Buffer-Overflow-Exploit-Development-Practice/raw/master/brainpan/brainpan.exe)
 
 # Crashing
 
