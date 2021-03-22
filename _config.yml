@@ -20,7 +20,7 @@ title                    : "0xAJ2K"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "0xAJ2K"
-description              : "OSCP & OSWP"
+description              : "Messing around with computers"
 url                      : "https://0xAJ2K.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -96,8 +96,8 @@ analytics:
 author:
   name             : "0xAJ2K"
   avatar           : "/assets/images/0xAJ2K.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Someone doing something"
-  location         : "Nowhere"
+  bio              : "OSCP | OSWP"
+  location         : "United Kingdom"
   email            :
   links:
     - label: "Email"
