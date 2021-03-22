@@ -20,7 +20,7 @@ The brainpan binary can be downloaded from [here](https://github.com/freddiebarr
 
 # Crashing
 
-Firstly, open the brainpan binary and set it running in Immunity. 
+Firstly, open the brainpan executable and set it running in Immunity. 
 
 Second, connect to brainpan on its port (9999) using nc from your attacking machine and send a small amount of data.  
 
@@ -30,7 +30,7 @@ Once you have sent some data, check the binary and you'll see that your data has
  
 ![copied to buffer](/assets/images/BOF/copied-to-buffer.PNG)
 
-Now, we need to send a lot of data and see if we can cause a crash. Use the skeleton script below to send 2000 "A" characters to the application. Change the local IP to match your current configurations.
+Now, we need to send a lot of data to see if we can cause a crash. Use the skeleton script below to send 2000 "A" characters to the application. Change the local IP to match your current configurations.
 
 ```python
 #!/usr/bin/env python
