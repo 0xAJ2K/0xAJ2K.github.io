@@ -3,6 +3,8 @@ layout: single
 title: Stack-Based Buffer Overflow on Brainpan.exe
 date: 2021-03-22
 classes: wide
+header:
+  teaser: /assets/images/BOF/teaser.PNG
 tags:
   - OSCP
   - Brainpan
