@@ -151,7 +151,7 @@ Check Immunity and right click on the ESP register and "Follow In Dump".
 
 ![follow in dump](/assets/images/BOF/follow-in-dump.PNG)
 
-Check the Stack window and copy from 01 to FF.
+Check the hext dump window and copy from 01 to FF.
 
 ![copy badchars](/assets/images/BOF/copy-badchars.PNG)
 
