@@ -8,6 +8,11 @@
 @import "minimal-mistakes"; // main partials
 
 ::selection {
-  color: red;
-  background: yellow;
+  color: #fff;
+  background: #ff5050;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #ff5050;
 }
