@@ -126,6 +126,17 @@ Host script results:
 # Nmap done at Wed May 19 12:45:56 2021 -- 1 IP address (1 host up) scanned in 101.87 seconds
 ```
 
+I can see that the DNS name of this box is `brute.csl`, add this into your `/etc/hosts` file. 
+
+```
+cat /etc/hosts 
+```
+
+```
+127.0.0.1       kali localhost
+172.31.3.3      brute.csl
+```
+
 # Enumerating Users
 
 Thanks to our port scan, I see that [Kerberos](https://en.wikipedia.org/wiki/Kerberos_(protocol)) is running on port 88.
