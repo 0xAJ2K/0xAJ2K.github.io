@@ -244,11 +244,7 @@ I run `strings` against the binary, just to see if I can gather any useful infor
 strings /home/joe/live_log
 ```
 
-Using `strings`, I see that the binary calls the `tail` binary, but does not use the absolute path of `/usr/bin/tail`. We should be able to exploit this to gain root. 
-
-```
-tail -f /var/log/nginx/access.log
-```
+Using `strings`, I see that the binary executes the `tail` binary, but does not use the absolute path of `/usr/bin/tail`. We should be able to exploit this to gain root as the OS will attempt to search for `tail` using our `PATH`, which we can control. Therefore, we can create a malicious `tail` and have it executed as root.  
 
 ![](/assets/images/THM-Mustacchio/strings.PNG)
 
