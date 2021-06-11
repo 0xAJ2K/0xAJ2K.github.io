@@ -16,11 +16,12 @@ minimal_mistakes_skin    : "dark" # "default" "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-UK"
-title                    : "0xAJ2K"
+title                    : "0xAJ2K | Ethical Hacking & Networking"
+tagline                  : "A blog dedicated to ethical hacking, CTF writeups and networking :)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "0xAJ2K"
-description              : "Messing around with computers"
+description              : "Security & Networking"
 url                      : "https://0xAJ2K.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
