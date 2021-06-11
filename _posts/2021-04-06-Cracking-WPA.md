@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Wireless Attacks Part 1 - Cracking WPA/WPA2 with PSK
+description: Attacking WPA/WPA2 with Kali!
 date: 2021-04-06
 classes: wide
 header:
