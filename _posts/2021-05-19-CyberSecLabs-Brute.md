@@ -1,6 +1,7 @@
 ---
 layout: single
 title: CyberSecLabs - Brute
+description: A walkthrough of the CyberSecLabs "Brute" machine.
 date: 2021-05-19
 classes: wide
 header:
