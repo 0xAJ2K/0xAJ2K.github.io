@@ -23,6 +23,8 @@ tags:
 
 In this blog, we'll be doing a walkthrough of [TryHackMe - Mustacchio](https://tryhackme.com/room/mustacchio). Many thanks to [zyeinn](https://tryhackme.com/p/zyeinn) for creating this awesome room! :) 
 
+Edit: 16/06/2021 - Turns out I did this box an unintended way, I'll leave this up anyway. :)
+
 # Recon 
 
 As usual, we'll run a Nmap port scan, just so we can see the potential attack vectors.
